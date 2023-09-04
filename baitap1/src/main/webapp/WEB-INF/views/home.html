@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:each="b:${blogs}">
+
+    <div>
+        <h3><b th:text="${b.nameBlog}"></b></h3>
+        <span   th:text="${b.startHeraders}"></span>
+    </div>
+    <!--          <p th:text="${b.content}"></p>-->
+    <div>
+        <div>
+            <a th:href="@{|/detail/${b.id}|}">
+                <button><b>Hiẻn Thị Bài viết</b></button>
+            </a>
+            <a th:href="@{|/edit/${b.id}|}">
+                <button><b>Sửa</b></button>
+            </a>
+            <a th:href="@{|/delete/${b.id}|}">
+                <button><b>Xóa</b></button>
+            </a>
+        </div>
+
+    </div>
+</th:block>
+</body>
+</html>

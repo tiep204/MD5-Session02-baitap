@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div >
+        <h3><b th:text="${blog.nameBlog}"></b></h3>
+        <span class="w3-opacity" th:text="${blog.startHeraders}"></span>
+    </div>
+
+    <div class="w3-container">
+        <p th:text="${blog.content}"></p>
+    </div>
+</div>
+</body>
+</html>
